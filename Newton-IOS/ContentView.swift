@@ -1,49 +1,48 @@
 import SwiftUI
-
 struct ContentView: View {
   var body: some View {
     ZStack {
       Rectangle()
         .foregroundColor(Color("Gray_background"))
+        .ignoresSafeArea()
 
       VStack {
-        ZStack {
+        HStack {
+          Button {
+            print("World")// затычка
+          } label: {
+            VStack {
+              Image(systemName: "sparkle.magnifyingglass")
+            }
+          }
+          Spacer()
           VStack(spacing: 0.0) {
             Text("Inbox")
               .font(.headline)
               .fontWeight(.semibold)
-              .foregroundColor(.black)
-              .padding(.top, 5.0)
             unreadNewsletters
-            Divider().background(.gray)
           }
-          HStack {
-            Spacer()
-            Button {
-              print("World")
-            } label: {
-              VStack {
-                Image(systemName: "sparkle.magnifyingglass")
-              }
-            }
-            Button {
-              print("World")
-            } label: {
-              VStack {
-                Image(systemName: "person.fill")
-              }
+          Spacer()
+          Button {
+            print("World")// затычка
+          } label: {
+            VStack {
+              Image(systemName: "person.fill")
             }
           }
-          .font(.title2)
-          .foregroundColor(Color("Gray_tabs"))
-          .padding(10)
         }
+        .font(.title2)
+        .foregroundColor(.black)
+        .padding(.horizontal, 12)
+
+        .padding(.top, 14)
         .frame(maxWidth: .infinity)
-        .background(.white)
 
         ScrollView {
-          ForEach(newsCardsContent) { item in
-            NewsletterCardView(card: item)
+          VStack(spacing: 0) {
+            ForEach(newsCardsContent) { item in
+              NewsletterCardView(card: item)
+            }
           }
         }
       }
@@ -53,9 +52,9 @@ struct ContentView: View {
     HStack {
       Circle()
         .foregroundColor(Color("Light_green"))
-        .frame(width: 9, height: 9)
+        .frame(width: 7, height: 7)
       // MARK: Number of unread - в Model
-      Text("\(zat1) unread newsletters   ")
+      Text("\(zat1) unread")
         .font(.footnote)
         .fontWeight(.regular)
         .foregroundColor(Color("Gray"))
@@ -71,35 +70,31 @@ struct NewsletterCardView: View {
         .foregroundColor(.white)
         .aspectRatio(366/90, contentMode: .fit)
         .cornerRadius(15)
-
-      VStack {
-        HStack {
-          Text(card.title).foregroundColor(.black)
-            .fontWeight(.bold)
-          Spacer()
-          if card.isFavorite == false {
-            Image(systemName: "star")
-              .font(.title2)
-              .foregroundColor(/*@START_MENU_TOKEN@*/Color("Gray")/*@END_MENU_TOKEN@*/)
-          } else {
-            Image(systemName: "star.fill")
-              .font(.title)
-          }
-        }
-        Spacer()
-        Spacer()
-        Spacer()
-        HStack {
-          Text(card.authorName).foregroundColor(.black)
-          Spacer()
-          Text(card.timeSincePublication).foregroundColor(Color("Gray"))
+      HStack {
+        Image(card.authorLogoName)
+          .padding(.vertical, 21)
+          .padding(.horizontal, 14)
+        VStack(alignment: .leading) {
+          Text(card.authorName)
             .font(.footnote)
+            .foregroundColor(/*@START_MENU_TOKEN@*/Color("Gray")/*@END_MENU_TOKEN@*/)
+          Text(card.title)
+            .font(.subheadline)
+            .fontWeight(.medium)
+            .foregroundColor(.black)
+          Spacer()
+        }.padding(.top, 16)
+        Spacer()
+        VStack {
+          Text(card.timeOfPublication)
+            .font(.footnote)
+            .padding()
+            .foregroundColor(Color("Gray"))
+          Spacer()
         }
       }
-      .padding(.vertical, 9)
-      .padding(.horizontal, 20)
     }
-    .padding(.horizontal)
+    .padding(.horizontal, 16)
   }
 }
 
@@ -108,41 +103,46 @@ struct Newsletter: Identifiable {
   var id = UUID()
   var title: String
   var authorName: String
-//  var author_logo: Image добавлю позже
-  var isFavorite: Bool = false
-  var timeSincePublication: String
+  var authorLogoName: String
+  var timeOfPublication: String
 }
 
 let newsCardsContent = [
+  Newsletter(title: "Apple just challenged Figma. Michal Malewicz",
+             authorName: "Medium Daily Digest",
+             authorLogoName: "Medium Daily Digest",
+             timeOfPublication: "19:20"
+            ),
+  Newsletter(title: "The Big Lie Is Just The Pretext",
+             authorName: "Charlie Sykes - The Bulwark",
+             authorLogoName: "The Bulwark",
+             timeOfPublication: "16:30"),
   Newsletter(title: "Android Weekly #525",
              authorName: "Android Weekly",
-             timeSincePublication: "5 min ago"
-             ),
-  Newsletter(title: "hackernewletter #604",
+             authorLogoName: "Android Weekly",
+             timeOfPublication: "15:00"),
+  Newsletter(title: "The Good Thing About Hard Things",
+             authorName: "not boring",
+             authorLogoName: "not boring",
+             timeOfPublication: "14:00"),
+  Newsletter(title: "Working for the Weekend #7: Amash/Kmele 2022!",
+             authorName: "Bankless",
+             authorLogoName: "The Fifth Column",
+             timeOfPublication: "11:30"),
+  Newsletter(title: "hackernewsletter #604",
              authorName: "Hacker News",
-             timeSincePublication: "10 min ago"),
-  Newsletter(title: "The Big Lie Is Just the Pretext",
-             authorName: "Charlie Sykes - The Bulwark",
-             timeSincePublication: "30 min ago"),
-  Newsletter(title: "The Crypto Revolution",
-             authorName: "Bankless",
-             timeSincePublication: "1 hour ago"),
-  Newsletter(title: "Does SBF Own Everything?",
-             authorName: "Bankless",
-             timeSincePublication: "3 hours ago"),
-  Newsletter(title: "Does SBF Own Everything?",
-             authorName: "Bankless",
-             timeSincePublication: "3 hours ago"),
-  Newsletter(title: "Does SBF Own Everything?",
-             authorName: "Bankless",
-             timeSincePublication: "3 hours ago")
+             authorLogoName: "Hacker News",
+             timeOfPublication: "10:20"),
+  Newsletter(title: "The Morning. NY Daily July 19, 2022",
+             authorName: "New York Time",
+             authorLogoName: "New York Time",
+             timeOfPublication: "9:00")
 ]
-
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView()
-//    NewsletterCardView()
       .previewDevice("iPhone 12")
+      .previewInterfaceOrientation(.portrait)
   }
 
 }
