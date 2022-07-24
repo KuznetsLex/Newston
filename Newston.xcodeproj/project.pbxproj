@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5237848B2888113100CD5926 /* Newton_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5237848A2888113100CD5926 /* Newton_IOSApp.swift */; };
+		5237848B2888113100CD5926 /* NewstonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5237848A2888113100CD5926 /* NewstonApp.swift */; };
 		5237848D2888113100CD5926 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5237848C2888113100CD5926 /* ContentView.swift */; };
 		5237848F2888113B00CD5926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5237848E2888113B00CD5926 /* Assets.xcassets */; };
 		523784922888113B00CD5926 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523784912888113B00CD5926 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		523784872888113100CD5926 /* Newton-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Newton-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5237848A2888113100CD5926 /* Newton_IOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Newton_IOSApp.swift; sourceTree = "<group>"; };
+		523784872888113100CD5926 /* Newston.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newston.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5237848A2888113100CD5926 /* NewstonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewstonApp.swift; sourceTree = "<group>"; };
 		5237848C2888113100CD5926 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5237848E2888113B00CD5926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		523784912888113B00CD5926 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -36,7 +36,7 @@
 		5237847E2888113100CD5926 = {
 			isa = PBXGroup;
 			children = (
-				523784892888113100CD5926 /* Newton-IOS */,
+				523784892888113100CD5926 /* Newston */,
 				523784882888113100CD5926 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,21 +44,21 @@
 		523784882888113100CD5926 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				523784872888113100CD5926 /* Newton-IOS.app */,
+				523784872888113100CD5926 /* Newston.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		523784892888113100CD5926 /* Newton-IOS */ = {
+		523784892888113100CD5926 /* Newston */ = {
 			isa = PBXGroup;
 			children = (
 				523784992889B10800CD5926 /* Info.plist */,
-				5237848A2888113100CD5926 /* Newton_IOSApp.swift */,
+				5237848A2888113100CD5926 /* NewstonApp.swift */,
 				5237848C2888113100CD5926 /* ContentView.swift */,
 				5237848E2888113B00CD5926 /* Assets.xcassets */,
 				523784902888113B00CD5926 /* Preview Content */,
 			);
-			path = "Newton-IOS";
+			path = Newston;
 			sourceTree = "<group>";
 		};
 		523784902888113B00CD5926 /* Preview Content */ = {
@@ -72,9 +72,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		523784862888113100CD5926 /* Newton-IOS */ = {
+		523784862888113100CD5926 /* Newston */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 523784952888113B00CD5926 /* Build configuration list for PBXNativeTarget "Newton-IOS" */;
+			buildConfigurationList = 523784952888113B00CD5926 /* Build configuration list for PBXNativeTarget "Newston" */;
 			buildPhases = (
 				523784982889AB2600CD5926 /* Run Script */,
 				523784832888113100CD5926 /* Sources */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = "Newton-IOS";
+			name = Newston;
 			productName = "Newton-IOS";
-			productReference = 523784872888113100CD5926 /* Newton-IOS.app */;
+			productReference = 523784872888113100CD5926 /* Newston.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 523784822888113100CD5926 /* Build configuration list for PBXProject "Newton-IOS" */;
+			buildConfigurationList = 523784822888113100CD5926 /* Build configuration list for PBXProject "Newston" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				523784862888113100CD5926 /* Newton-IOS */,
+				523784862888113100CD5926 /* Newston */,
 			);
 		};
 /* End PBXProject section */
@@ -162,7 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5237848D2888113100CD5926 /* ContentView.swift in Sources */,
-				5237848B2888113100CD5926 /* Newton_IOSApp.swift in Sources */,
+				5237848B2888113100CD5926 /* NewstonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,12 +290,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Newton-IOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Newston/Preview Content\"";
 				DEVELOPMENT_TEAM = 4TFW4QHXF8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Newton-IOS/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Newton;
+				INFOPLIST_FILE = Newston/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Newston;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -306,7 +306,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Effective.Newton-IOS";
+				PRODUCT_BUNDLE_IDENTIFIER = io.Newston;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -321,12 +321,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Newton-IOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Newston/Preview Content\"";
 				DEVELOPMENT_TEAM = 4TFW4QHXF8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Newton-IOS/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Newton;
+				INFOPLIST_FILE = Newston/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Newston;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -337,7 +337,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Effective.Newton-IOS";
+				PRODUCT_BUNDLE_IDENTIFIER = io.Newston;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -348,7 +348,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		523784822888113100CD5926 /* Build configuration list for PBXProject "Newton-IOS" */ = {
+		523784822888113100CD5926 /* Build configuration list for PBXProject "Newston" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				523784932888113B00CD5926 /* Debug */,
@@ -357,7 +357,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		523784952888113B00CD5926 /* Build configuration list for PBXNativeTarget "Newton-IOS" */ = {
+		523784952888113B00CD5926 /* Build configuration list for PBXNativeTarget "Newston" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				523784962888113B00CD5926 /* Debug */,
