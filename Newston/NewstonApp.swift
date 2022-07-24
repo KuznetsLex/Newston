@@ -1,6 +1,6 @@
 //
-//  Newton_IOSApp.swift
-//  Newton-IOS
+//  NewstonApp.swift
+//  Newston
 //
 //  Created by test on 20.07.2022.
 //
@@ -8,9 +8,7 @@
 import SwiftUI
 
 @main
-// swiftlint: disable type_name
-struct Newton_IOSApp: App {
-// swiftlint: enable type_name
+struct Newston: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
