@@ -1,6 +1,7 @@
 import SwiftUI
 struct ContentView: View {
-    @StateObject private var inboxVM = InboxVM()
+    @ObservedObject var inboxViewModel: InboxViewModel
+
     var body: some View {
         ZStack {
             Rectangle()
@@ -17,10 +18,10 @@ struct ContentView: View {
                     }
                     Spacer()
                     VStack(spacing: 0.0) {
-                        Text("Inbox")
+                        Text(inboxViewModel.title)
                             .font(.headline)
                             .fontWeight(.semibold)
-                        Text("\(inboxVM.numberOfUnread) unread")
+                        Text(inboxViewModel.unreadInfo)
                             .font(.footnote)
                             .fontWeight(.regular)
                             .foregroundColor(Color("Gray"))
@@ -44,7 +45,7 @@ struct ContentView: View {
 
                 ScrollView {
                     VStack(spacing: 0) {
-                        ForEach(inboxVM.newsCardsContent) { item in
+                        ForEach(inboxViewModel.newsCardsContent) { item in
                             NewsletterCardView(card: item)
                         }
                     }
@@ -94,7 +95,8 @@ struct NewsletterCardView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let inboxViewModel = InboxViewModel()
+        ContentView(inboxViewModel: inboxViewModel)
             .previewDevice("iPhone 12")
             .previewInterfaceOrientation(.portrait)
     }

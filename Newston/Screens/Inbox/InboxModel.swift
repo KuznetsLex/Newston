@@ -1,9 +1,9 @@
 import Foundation
 
 struct NewsletterIssue: Identifiable {
-    var id = UUID()
-    var title: String
-    var authorName: String
-    var authorLogoName: String
-    var timeOfPublication: String
+    let id = UUID()
+    let title: String
+    let authorName: String
+    let authorLogoName: String
+    let timeOfPublication: String
 }

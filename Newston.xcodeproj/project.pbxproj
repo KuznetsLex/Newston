@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		520E2ED7288FB263008F9BA1 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E2ED6288FB263008F9BA1 /* DiscoverView.swift */; };
 		520E2ED9288FB272008F9BA1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E2ED8288FB272008F9BA1 /* ProfileView.swift */; };
-		520E2EDB288FB28C008F9BA1 /* InboxVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E2EDA288FB28C008F9BA1 /* InboxVM.swift */; };
 		520E2EE1288FB3D5008F9BA1 /* InboxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E2EE0288FB3D5008F9BA1 /* InboxModel.swift */; };
 		520E2EE3288FB481008F9BA1 /* DiscoverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E2EE2288FB481008F9BA1 /* DiscoverModel.swift */; };
 		520E2EE5288FB491008F9BA1 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E2EE4288FB491008F9BA1 /* ProfileModel.swift */; };
@@ -19,12 +18,12 @@
 		5237848D2888113100CD5926 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5237848C2888113100CD5926 /* ContentView.swift */; };
 		5237848F2888113B00CD5926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5237848E2888113B00CD5926 /* Assets.xcassets */; };
 		523784922888113B00CD5926 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523784912888113B00CD5926 /* Preview Assets.xcassets */; };
+		526BE009289060B400EDD2CE /* InboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BE008289060B400EDD2CE /* InboxViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		520E2ED6288FB263008F9BA1 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		520E2ED8288FB272008F9BA1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		520E2EDA288FB28C008F9BA1 /* InboxVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxVM.swift; sourceTree = "<group>"; };
 		520E2EE0288FB3D5008F9BA1 /* InboxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxModel.swift; sourceTree = "<group>"; };
 		520E2EE2288FB481008F9BA1 /* DiscoverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverModel.swift; sourceTree = "<group>"; };
 		520E2EE4288FB491008F9BA1 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		5237848E2888113B00CD5926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		523784912888113B00CD5926 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		523784992889B10800CD5926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		526BE008289060B400EDD2CE /* InboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				520E2EE0288FB3D5008F9BA1 /* InboxModel.swift */,
-				520E2EDA288FB28C008F9BA1 /* InboxVM.swift */,
 				5237848C2888113100CD5926 /* ContentView.swift */,
+				526BE008289060B400EDD2CE /* InboxViewModel.swift */,
 			);
 			path = Inbox;
 			sourceTree = "<group>";
@@ -234,13 +234,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				520E2EE3288FB481008F9BA1 /* DiscoverModel.swift in Sources */,
-				520E2EDB288FB28C008F9BA1 /* InboxVM.swift in Sources */,
 				520E2ED9288FB272008F9BA1 /* ProfileView.swift in Sources */,
 				520E2EE8288FDE2A008F9BA1 /* ProfileViewModel.swift in Sources */,
 				5237848D2888113100CD5926 /* ContentView.swift in Sources */,
 				5237848B2888113100CD5926 /* NewstonApp.swift in Sources */,
 				520E2EE5288FB491008F9BA1 /* ProfileModel.swift in Sources */,
 				520E2EEA288FDE5B008F9BA1 /* DiscoverViewModel.swift in Sources */,
+				526BE009289060B400EDD2CE /* InboxViewModel.swift in Sources */,
 				520E2EE1288FB3D5008F9BA1 /* InboxModel.swift in Sources */,
 				520E2ED7288FB263008F9BA1 /* DiscoverView.swift in Sources */,
 			);

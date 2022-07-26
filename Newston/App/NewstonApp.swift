@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct Newston: App {
+    let inboxViewModel = InboxViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(inboxViewModel: inboxViewModel)
         }
     }
 }
