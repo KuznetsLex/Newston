@@ -1,5 +1,6 @@
 import SwiftUI
 struct ContentView: View {
+    @StateObject private var inboxVM = InboxVM()
     var body: some View {
         ZStack {
             Rectangle()
@@ -19,7 +20,11 @@ struct ContentView: View {
                         Text("Inbox")
                             .font(.headline)
                             .fontWeight(.semibold)
-                        unreadNewsletters
+                        Text("\(inboxVM.numberOfUnread) unread")
+                            .font(.footnote)
+                            .fontWeight(.regular)
+                            .foregroundColor(Color("Gray"))
+                            .padding(.bottom, 6)
                     }
                     Spacer()
                     Button {
@@ -39,7 +44,7 @@ struct ContentView: View {
 
                 ScrollView {
                     VStack(spacing: 0) {
-                        ForEach(newsCardsContent) { item in
+                        ForEach(inboxVM.newsCardsContent) { item in
                             NewsletterCardView(card: item)
                         }
                     }
@@ -47,22 +52,10 @@ struct ContentView: View {
             }
         }
     }
-    var unreadNewsletters: some View {
-        HStack {
-            Circle()
-                .foregroundColor(Color("Light_green"))
-                .frame(width: 7, height: 7)
-            // MARK: NumberOfUnread - в Model
-            Text("\(numberOfUnread) unread")
-                .font(.footnote)
-                .fontWeight(.regular)
-                .foregroundColor(Color("Gray"))
-        }.padding(.bottom, 6)
-    }
-    var numberOfUnread = 12
+
 }
 struct NewsletterCardView: View {
-    var card: Newsletter
+    var card: NewsletterIssue
     var body: some View {
         ZStack {
             Rectangle()
@@ -99,45 +92,6 @@ struct NewsletterCardView: View {
     }
 }
 
-// MARK: Заполнение газетами - в Model
-struct Newsletter: Identifiable {
-    var id = UUID()
-    var title: String
-    var authorName: String
-    var authorLogoName: String
-    var timeOfPublication: String
-}
-
-let newsCardsContent = [
-    Newsletter(title: "Apple just challenged Figma. Michal Malewicz",
-               authorName: "Medium Daily Digest",
-               authorLogoName: "Medium Daily Digest",
-               timeOfPublication: "19:20"),
-    Newsletter(title: "The Big Lie Is Just The Pretext",
-               authorName: "Charlie Sykes - The Bulwark",
-               authorLogoName: "The Bulwark",
-               timeOfPublication: "16:30"),
-    Newsletter(title: "Android Weekly #525",
-               authorName: "Android Weekly",
-               authorLogoName: "Android Weekly",
-               timeOfPublication: "15:00"),
-    Newsletter(title: "The Good Thing About Hard Things",
-               authorName: "not boring",
-               authorLogoName: "not boring",
-               timeOfPublication: "14:00"),
-    Newsletter(title: "Working for the Weekend #7: Amash/Kmele 2022!",
-               authorName: "Bankless",
-               authorLogoName: "The Fifth Column",
-               timeOfPublication: "11:30"),
-    Newsletter(title: "hackernewsletter #604",
-               authorName: "Hacker News",
-               authorLogoName: "Hacker News",
-               timeOfPublication: "10:20"),
-    Newsletter(title: "The Morning. NY Daily July 19, 2022",
-               authorName: "New York Time",
-               authorLogoName: "New York Time",
-               timeOfPublication: "9:00")
-]
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

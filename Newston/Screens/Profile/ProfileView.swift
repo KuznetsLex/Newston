@@ -1,15 +1,8 @@
-//
-//  ProfileView.swift
-//  Newston
-//
-//  Created by test on 26.07.2022.
-//
-
 import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/) // todo
     }
 }
 
