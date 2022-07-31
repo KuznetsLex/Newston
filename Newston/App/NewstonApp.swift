@@ -9,10 +9,10 @@ import SwiftUI
 
 @main
 struct Newston: App {
-    let inboxViewModel = InboxViewModel()
+    let splashViewModel = SplashViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView(inboxViewModel: inboxViewModel)
+            SplachScreenView(splashViewModel: splashViewModel)
         }
     }
 }

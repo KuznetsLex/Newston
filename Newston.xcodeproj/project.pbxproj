@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520DEDB02892B191003B5106 /* SplachScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DEDAF2892B191003B5106 /* SplachScreenView.swift */; };
+		520DEDB22892BB4F003B5106 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DEDB12892BB4F003B5106 /* SplashViewModel.swift */; };
 		520E2ED7288FB263008F9BA1 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E2ED6288FB263008F9BA1 /* DiscoverView.swift */; };
 		520E2ED9288FB272008F9BA1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E2ED8288FB272008F9BA1 /* ProfileView.swift */; };
 		520E2EE1288FB3D5008F9BA1 /* InboxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E2EE0288FB3D5008F9BA1 /* InboxModel.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520DEDAF2892B191003B5106 /* SplachScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplachScreenView.swift; sourceTree = "<group>"; };
+		520DEDB12892BB4F003B5106 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		520E2ED6288FB263008F9BA1 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		520E2ED8288FB272008F9BA1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		520E2EE0288FB3D5008F9BA1 /* InboxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxModel.swift; sourceTree = "<group>"; };
@@ -49,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520DEDAE2892B155003B5106 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				520DEDAF2892B191003B5106 /* SplachScreenView.swift */,
+				520DEDB12892BB4F003B5106 /* SplashViewModel.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		520E2ED1288FB0FB008F9BA1 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +110,7 @@
 		520E2EEB288FDF00008F9BA1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				520DEDAE2892B155003B5106 /* Splash */,
 				520E2ED2288FB101008F9BA1 /* Inbox */,
 				520E2ED5288FB116008F9BA1 /* Discover */,
 				520E2ED3288FB109008F9BA1 /* Profile */,
@@ -234,7 +248,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				520E2EE3288FB481008F9BA1 /* DiscoverModel.swift in Sources */,
+				520DEDB02892B191003B5106 /* SplachScreenView.swift in Sources */,
 				520E2ED9288FB272008F9BA1 /* ProfileView.swift in Sources */,
+				520DEDB22892BB4F003B5106 /* SplashViewModel.swift in Sources */,
 				520E2EE8288FDE2A008F9BA1 /* ProfileViewModel.swift in Sources */,
 				5237848D2888113100CD5926 /* ContentView.swift in Sources */,
 				5237848B2888113100CD5926 /* NewstonApp.swift in Sources */,
