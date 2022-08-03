@@ -1,13 +1,15 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @ObservedObject var profileViewModel: ProfileViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/) // todo
+        Text("Profile") // todo
     }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        let profileViewModel = ProfileViewModel()
+        ProfileView(profileViewModel: profileViewModel)
     }
 }
