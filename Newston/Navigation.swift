@@ -1,6 +1,7 @@
 import SwiftUI
 
 enum Route {
+    case splash
     case startInbox
     case inbox
     case discover
@@ -10,7 +11,10 @@ enum Route {
 struct Navigator {
     static func navigate<T: View>(to route: Route, content: () -> T) -> some View {
         switch route {
-        case .startInbox :
+        case .splash:
+            let splashViewModel = SplashViewModel()
+            return AnyView(SplashView(splashViewModel: splashViewModel))
+        case .startInbox:
             let inboxViewModel = InboxViewModel()
             return AnyView(InboxView(inboxViewModel: inboxViewModel))
         case .inbox:

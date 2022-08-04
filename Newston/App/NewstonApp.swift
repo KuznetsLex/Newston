@@ -12,7 +12,7 @@ struct Newston: App {
     var body: some Scene {
         WindowGroup {
 
-            Navigator.navigate(to: .startInbox, content: { EmptyView() })
+            Navigator.navigate(to: .splash, content: { EmptyView() })
         }
     }
 }
