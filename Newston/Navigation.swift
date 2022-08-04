@@ -1,14 +1,18 @@
 import SwiftUI
 
 enum Route {
+    case startInbox
     case inbox
     case discover
     case profile
 }
 
 struct Navigator {
-    static func navigate<T: View>(to route: Route, content: () -> T) -> AnyView {
+    static func navigate<T: View>(to route: Route, content: () -> T) -> some View {
         switch route {
+        case .startInbox :
+            let inboxViewModel = InboxViewModel()
+            return AnyView(InboxView(inboxViewModel: inboxViewModel))
         case .inbox:
             let inboxViewModel = InboxViewModel()
             return AnyView(NavigationLink(

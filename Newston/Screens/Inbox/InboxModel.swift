@@ -7,10 +7,3 @@ struct NewsletterIssue: Identifiable {
     let authorLogoName: String
     let timeOfPublication: String
 }
-
-protocol NewsletterIssueDisplayable {
-    var titleDisplayable: String { get }
-    var authorNameDisplayable: String { get }
-    var authorLogoNameDisplayable: String { get }
-    var timeOfPublicationDisplayable: String { get }
-}

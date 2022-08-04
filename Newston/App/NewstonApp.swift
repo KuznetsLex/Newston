@@ -9,10 +9,10 @@ import SwiftUI
 
 @main
 struct Newston: App {
-    let inboxViewModel = InboxViewModel()
     var body: some Scene {
         WindowGroup {
-            InboxView(inboxViewModel: inboxViewModel)
+
+            Navigator.navigate(to: .startInbox, content: { EmptyView() })
         }
     }
 }
