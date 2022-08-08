@@ -17,10 +17,11 @@ extension NewsletterIssue: NewsletterIssueDisplayable {
 struct NewsletterCardView: View {
     var item: NewsletterIssueDisplayable
     var body: some View {
+
         HStack {
             Image(item.authorLogoNameDisplayable)
-                .padding(.vertical, 21)
-                .padding(.horizontal, 14)
+                .padding(.vertical, 24)
+                .padding(.horizontal, 16)
             VStack(alignment: .leading) {
                 Text(item.authorNameDisplayable)
                     .font(.footnote)
@@ -37,14 +38,15 @@ struct NewsletterCardView: View {
             VStack {
                 Text(item.timeOfPublicationDisplayable)
                     .font(.footnote)
-                    .padding()
+                    .padding(.trailing, 16)
+                    .padding(.top, 16)
                     .foregroundColor(Color("Gray"))
                 Spacer()
             }
         }
+        .aspectRatio(390/96, contentMode: .fit)
         .background(.white)
-        .aspectRatio(366/90, contentMode: .fit)
         .cornerRadius(15)
-        .padding(.horizontal, 12)
+        .padding(.vertical, 4)
     }
 }

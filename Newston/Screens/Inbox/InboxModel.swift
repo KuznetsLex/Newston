@@ -6,4 +6,5 @@ struct NewsletterIssue: Identifiable {
     let authorName: String
     let authorLogoName: String
     let timeOfPublication: String
+    var isRead: Bool
 }
