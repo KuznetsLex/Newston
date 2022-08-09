@@ -4,8 +4,8 @@ struct InboxView: View {
     var body: some View {
         NavigationView {
             VStack {
-                navigationBar// .padding(.bottom, 16)
-                ScrollingIssues()
+                navigationBar
+                listOfCards
             }
             .navigationTitle("")
             .navigationBarHidden(true)
@@ -31,17 +31,14 @@ struct InboxView: View {
                     Text("Edit")
                         .font(.body)
                         .padding(.horizontal, 12)
+
                 }
                 Spacer()
                 Button {} label: {
-                    Navigator.navigate(to: .discover) {
-                        Image("discoverIcon")
-                    }
+                    inboxViewModel.toDiscover
                 }
                 Button {} label: {
-                    Navigator.navigate(to: .profile) {
-                        Image("profileIcon")
-                    }
+                    inboxViewModel.toProfile
                 }
                 .padding(.leading, 11)
                 .padding(.trailing, 9)
@@ -55,48 +52,43 @@ struct InboxView: View {
 
 }
 
-struct ScrollingIssues: View {
+var listOfCards: some View {
     let inboxViewModel = InboxViewModel()
-    var body: some View {
-        List(inboxViewModel.newsCardsContent) { item in
-            NewsletterCardView(item: item)
-                .listRowBackground(Color("Gray_background"))
-                .listRowSeparator(.hidden)
-                .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
-                .swipeActions(edge: .leading) {
-                    Button {
-                        inboxViewModel.toggleIssueRead()
-                    } label: {
-                        VStack {
-                            Spacer()
-                            Image(systemName: "envelope")
-                            Spacer()
-                            Text("Read")
-                                .font(.body)
-                            Spacer()
-                        }
-                    }
+    return List(inboxViewModel.newsCardsContent) { item in
+        NewsletterCardView(item: item)
+            .listRowBackground(Color("Gray_background"))
+            .listRowSeparator(.hidden)
+            .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+            .swipeActions(edge: .leading) {
+                Button {
+                    inboxViewModel.toggleIssueRead()
                 }
+                label: {
+                    Label("Read", systemImage: "envelope.open")
+                }
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+            }
+            .tint(.orange)
 
-                .swipeActions(edge: .trailing) {
-                    Button {
-                        inboxViewModel.archiveIssue()
-                    } label: {
-                        VStack {
-                            Spacer()
-                            Image(systemName: "archivebox")
-                            Spacer()
-                            Text("Archive")
-                                .font(.body)
-                            Spacer()
-                        }
+            .swipeActions(edge: .trailing) {
+                Button {
+                    inboxViewModel.archiveIssue()
+                } label: {
+                    VStack {
+                        Spacer()
+                        Image(systemName: "archivebox")
+                        Spacer()
+                        Text("Archive")
+                            .font(.body)
+                        Spacer()
                     }
                 }
-        }
+            }
+
     }
-    //        .toolbar {
-    //            ToolbarItem { EditButton() }
-    //        }
+    //    .toolbar {
+    //        ToolbarItem { EditButton() }
+    //    }
 }
 struct InboxView_Previews: PreviewProvider {
     static var previews: some View {

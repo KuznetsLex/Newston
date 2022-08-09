@@ -17,6 +17,18 @@ class InboxViewModel: ObservableObject {
         // todo
     }
 
+    var toDiscover: some View {
+        Navigator.navigate(to: .discover) {
+            Image("discoverIcon")
+        }
+    }
+
+    var toProfile: some View {
+        Navigator.navigate(to: .profile) {
+            Image("profileIcon")
+        }
+    }
+
     var newsCardsContent = [
         NewsletterIssue(title: "Apple just challenged Figma. Michal Malewicz",
                         authorName: "Medium Daily Digest",
@@ -45,7 +57,7 @@ class InboxViewModel: ObservableObject {
                         isRead: false),
         NewsletterIssue(title: "hackernewsletter #604",
                         authorName: "Hacker News",
-                        authorLogoName: "Hacker News",
+                        authorLogoName: "test",
                         timeOfPublication: "10:20",
                         isRead: false),
         NewsletterIssue(title: "The Morning. NY Daily July 19, 2022",

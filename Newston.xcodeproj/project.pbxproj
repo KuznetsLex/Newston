@@ -23,6 +23,7 @@
 		5243085B289C245100278275 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243085A289C245100278275 /* SplashViewModel.swift */; };
 		5243087728A0313C00278275 /* DiscoverPopularCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243087628A0313C00278275 /* DiscoverPopularCard.swift */; };
 		5243087928A047D600278275 /* DiscoverCategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243087828A047D600278275 /* DiscoverCategoryCard.swift */; };
+		5269FD3F28A2EA8D00953BEA /* SquareIconsViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5269FD3E28A2EA8D00953BEA /* SquareIconsViewModifier.swift */; };
 		526BE009289060B400EDD2CE /* InboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BE008289060B400EDD2CE /* InboxViewModel.swift */; };
 		526C7B05289A9B5A00DAB86D /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C7B04289A9B5A00DAB86D /* Navigation.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		5243085A289C245100278275 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		5243087628A0313C00278275 /* DiscoverPopularCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPopularCard.swift; sourceTree = "<group>"; };
 		5243087828A047D600278275 /* DiscoverCategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCategoryCard.swift; sourceTree = "<group>"; };
+		5269FD3E28A2EA8D00953BEA /* SquareIconsViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareIconsViewModifier.swift; sourceTree = "<group>"; };
 		526BE008289060B400EDD2CE /* InboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewModel.swift; sourceTree = "<group>"; };
 		526C7B04289A9B5A00DAB86D /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +173,7 @@
 			children = (
 				526C7B04289A9B5A00DAB86D /* Navigation.swift */,
 				5237848E2888113B00CD5926 /* Assets.xcassets */,
+				5269FD3E28A2EA8D00953BEA /* SquareIconsViewModifier.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				520E2EE8288FDE2A008F9BA1 /* ProfileViewModel.swift in Sources */,
 				5243085B289C245100278275 /* SplashViewModel.swift in Sources */,
 				5237848D2888113100CD5926 /* InboxView.swift in Sources */,
+				5269FD3F28A2EA8D00953BEA /* SquareIconsViewModifier.swift in Sources */,
 				5237848B2888113100CD5926 /* NewstonApp.swift in Sources */,
 				520E2EE5288FB491008F9BA1 /* ProfileModel.swift in Sources */,
 				520E2EEA288FDE5B008F9BA1 /* DiscoverViewModel.swift in Sources */,
