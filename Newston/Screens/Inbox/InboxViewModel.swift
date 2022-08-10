@@ -3,6 +3,7 @@ import SwiftUI
 class InboxViewModel: ObservableObject {
     var numberOfUnread: Int
     @Published var unreadInfo: String
+
     init() {
         numberOfUnread = 15
         unreadInfo = "\(numberOfUnread) unread"
@@ -28,6 +29,9 @@ class InboxViewModel: ObservableObject {
             Image("profileIcon")
         }
     }
+
+//    let listOfInboxCards = ListOfInboxCards()
+//    listOfInboxCards.inboxViewModel = InboxViewModel()
 
     var newsCardsContent = [
         NewsletterIssue(title: "Apple just challenged Figma. Michal Malewicz",
@@ -87,3 +91,4 @@ class InboxViewModel: ObservableObject {
                         isRead: false)
     ]
 }
+
