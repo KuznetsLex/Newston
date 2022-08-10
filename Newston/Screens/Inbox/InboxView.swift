@@ -1,11 +1,11 @@
 import SwiftUI
 
-let inboxViewModel = InboxViewModel()
-let listOfInboxCards = InboxView.ListOfInboxCards(inboxViewModel: inboxViewModel)
-let navigationBar = InboxView.NavigationBar(inboxViewModel: inboxViewModel)
-
 struct InboxView: View {
     @ObservedObject var inboxViewModel: InboxViewModel
+    init (inboxViewModel: InboxViewModel) {
+        self.inboxViewModel = inboxViewModel
+    }
+
     var body: some View {
         NavigationView {
             VStack {
@@ -17,12 +17,7 @@ struct InboxView: View {
             .background(Color("Gray_background"))
         }
     }
-    struct NavigationBar: View {
-        private let inboxViewModel: InboxViewModel
-        init (inboxViewModel: InboxViewModel) {
-            self.inboxViewModel = inboxViewModel
-        }
-        var body: some View {
+    var navigationBar: some View {
             ZStack {
                 VStack(spacing: 0.0) {
                     Text(inboxViewModel.title)
@@ -44,10 +39,10 @@ struct InboxView: View {
                     }
                     Spacer()
                     Button {} label: {
-                        inboxViewModel.toDiscover
+                        inboxViewModel.toDiscoverActionLink
                     }
                     Button {} label: {
-                        inboxViewModel.toProfile
+                        inboxViewModel.toProfileActionLink
                     }
                     .padding(.leading, 11)
                     .padding(.trailing, 9)
@@ -57,16 +52,10 @@ struct InboxView: View {
             .foregroundColor(.black)
             .padding(.top, 18)
             .frame(maxWidth: .infinity)
-        }
+
     }
 
-    struct ListOfInboxCards: View {
-        private let inboxViewModel: InboxViewModel
-        init (inboxViewModel: InboxViewModel) {
-            self.inboxViewModel = inboxViewModel
-        }
-
-        var body: some View {
+    var listOfInboxCards: some View {
             List(inboxViewModel.newsCardsContent) { item in
                 NewsletterCardView(item: item)
                     .listRowBackground(Color("Gray_background"))
@@ -74,35 +63,22 @@ struct InboxView: View {
                     .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
                     .swipeActions(edge: .leading) {
                         Button {
-                            self.inboxViewModel.toggleIssueRead()
+                            inboxViewModel.toggleIssueRead()
                         }
                     label: {
                         Label("Read", systemImage: "envelope.open")
                     }
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .background(RoundedRectangle(cornerRadius: 15).fill(.orange))
                     }
-                    .tint(.orange)
-
                     .swipeActions(edge: .trailing) {
                         Button {
-                            self.inboxViewModel.archiveIssue()
+                            inboxViewModel.archiveIssue()
                         } label: {
-                            VStack {
-                                Spacer()
-                                Image(systemName: "archivebox")
-                                Spacer()
-                                Text("Archive")
-                                    .font(.body)
-                                Spacer()
-                            }
+                            Label("Archive", systemImage: "archivebox")
                         }
                     }
-
             }
-        }
-        //    .toolbar {
-        //        ToolbarItem { EditButton() }
-        //    }
+
     }
 }
 

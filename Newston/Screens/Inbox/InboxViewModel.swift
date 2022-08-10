@@ -12,26 +12,23 @@ class InboxViewModel: ObservableObject {
     let title = "Inbox"
 
     func toggleIssueRead() {
-        // todo
+        // MARK: todo
     }
     func archiveIssue() {
-        // todo
+        // MARK: todo
     }
 
-    var toDiscover: some View {
+    var toDiscoverActionLink: some View {
         Navigator.navigate(to: .discover) {
             Image("discoverIcon")
         }
     }
 
-    var toProfile: some View {
+    var toProfileActionLink: some View {
         Navigator.navigate(to: .profile) {
             Image("profileIcon")
         }
     }
-
-//    let listOfInboxCards = ListOfInboxCards()
-//    listOfInboxCards.inboxViewModel = InboxViewModel()
 
     var newsCardsContent = [
         NewsletterIssue(title: "Apple just challenged Figma. Michal Malewicz",
@@ -91,4 +88,3 @@ class InboxViewModel: ObservableObject {
                         isRead: false)
     ]
 }
-

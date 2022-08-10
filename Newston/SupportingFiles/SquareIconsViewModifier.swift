@@ -1,8 +1,5 @@
 import SwiftUI
-/// Common aspect ratios
-
-/// Fit an image to a certain aspect ratio while maintaining its aspect ratio
-public struct FitToAspectSquare: ViewModifier {
+struct FitToAspectSquare: ViewModifier {
 
     public func body(content: Content) -> some View {
         ZStack {
@@ -18,7 +15,6 @@ public struct FitToAspectSquare: ViewModifier {
     }
 }
 
-// Image extension that composes with the .resizable() modifier
 public extension Image {
     func fitToSquare() -> some View {
         self.resizable().modifier(FitToAspectSquare())
