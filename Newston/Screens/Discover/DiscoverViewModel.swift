@@ -1,2 +1,5 @@
 import Foundation
-// todo
+
+class DiscoverViewModel: ObservableObject {
+    // todo
+}

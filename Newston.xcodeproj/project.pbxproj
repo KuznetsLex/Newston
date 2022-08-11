@@ -15,10 +15,17 @@
 		520E2EE8288FDE2A008F9BA1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E2EE7288FDE2A008F9BA1 /* ProfileViewModel.swift */; };
 		520E2EEA288FDE5B008F9BA1 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520E2EE9288FDE5B008F9BA1 /* DiscoverViewModel.swift */; };
 		5237848B2888113100CD5926 /* NewstonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5237848A2888113100CD5926 /* NewstonApp.swift */; };
-		5237848D2888113100CD5926 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5237848C2888113100CD5926 /* ContentView.swift */; };
+		5237848D2888113100CD5926 /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5237848C2888113100CD5926 /* InboxView.swift */; };
 		5237848F2888113B00CD5926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5237848E2888113B00CD5926 /* Assets.xcassets */; };
 		523784922888113B00CD5926 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 523784912888113B00CD5926 /* Preview Assets.xcassets */; };
+		52430855289BCF9400278275 /* NewsletterIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52430854289BCF9400278275 /* NewsletterIssue.swift */; };
+		52430859289C243B00278275 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52430858289C243B00278275 /* SplashView.swift */; };
+		5243085B289C245100278275 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243085A289C245100278275 /* SplashViewModel.swift */; };
+		5243087728A0313C00278275 /* DiscoverPopularCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243087628A0313C00278275 /* DiscoverPopularCard.swift */; };
+		5243087928A047D600278275 /* DiscoverCategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243087828A047D600278275 /* DiscoverCategoryCard.swift */; };
+		5269FD3F28A2EA8D00953BEA /* SquareIconsViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5269FD3E28A2EA8D00953BEA /* SquareIconsViewModifier.swift */; };
 		526BE009289060B400EDD2CE /* InboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BE008289060B400EDD2CE /* InboxViewModel.swift */; };
+		526C7B05289A9B5A00DAB86D /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C7B04289A9B5A00DAB86D /* Navigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +38,18 @@
 		520E2EE9288FDE5B008F9BA1 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
 		523784872888113100CD5926 /* Newston.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newston.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5237848A2888113100CD5926 /* NewstonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewstonApp.swift; sourceTree = "<group>"; };
-		5237848C2888113100CD5926 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5237848C2888113100CD5926 /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
 		5237848E2888113B00CD5926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		523784912888113B00CD5926 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		523784992889B10800CD5926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		523784992889B10800CD5926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52430854289BCF9400278275 /* NewsletterIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsletterIssue.swift; sourceTree = "<group>"; };
+		52430858289C243B00278275 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		5243085A289C245100278275 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		5243087628A0313C00278275 /* DiscoverPopularCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPopularCard.swift; sourceTree = "<group>"; };
+		5243087828A047D600278275 /* DiscoverCategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCategoryCard.swift; sourceTree = "<group>"; };
+		5269FD3E28A2EA8D00953BEA /* SquareIconsViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareIconsViewModifier.swift; sourceTree = "<group>"; };
 		526BE008289060B400EDD2CE /* InboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewModel.swift; sourceTree = "<group>"; };
+		526C7B04289A9B5A00DAB86D /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				520E2EE0288FB3D5008F9BA1 /* InboxModel.swift */,
-				5237848C2888113100CD5926 /* ContentView.swift */,
+				5237848C2888113100CD5926 /* InboxView.swift */,
 				526BE008289060B400EDD2CE /* InboxViewModel.swift */,
+				52430854289BCF9400278275 /* NewsletterIssue.swift */,
 			);
 			path = Inbox;
 			sourceTree = "<group>";
@@ -90,6 +105,8 @@
 				520E2EE2288FB481008F9BA1 /* DiscoverModel.swift */,
 				520E2EE9288FDE5B008F9BA1 /* DiscoverViewModel.swift */,
 				520E2ED6288FB263008F9BA1 /* DiscoverView.swift */,
+				5243087628A0313C00278275 /* DiscoverPopularCard.swift */,
+				5243087828A047D600278275 /* DiscoverCategoryCard.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -97,6 +114,7 @@
 		520E2EEB288FDF00008F9BA1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				52430857289C23FE00278275 /* Splash */,
 				520E2ED2288FB101008F9BA1 /* Inbox */,
 				520E2ED5288FB116008F9BA1 /* Discover */,
 				520E2ED3288FB109008F9BA1 /* Profile */,
@@ -123,11 +141,11 @@
 		523784892888113100CD5926 /* Newston */ = {
 			isa = PBXGroup;
 			children = (
-				520E2EEB288FDF00008F9BA1 /* Screens */,
 				520E2ED1288FB0FB008F9BA1 /* App */,
+				520E2EEB288FDF00008F9BA1 /* Screens */,
 				520E2ED4288FB10F008F9BA1 /* API */,
+				526C7B03289A8E8A00DAB86D /* SupportingFiles */,
 				523784992889B10800CD5926 /* Info.plist */,
-				5237848E2888113B00CD5926 /* Assets.xcassets */,
 				523784902888113B00CD5926 /* Preview Content */,
 			);
 			path = Newston;
@@ -139,6 +157,25 @@
 				523784912888113B00CD5926 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52430857289C23FE00278275 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				52430858289C243B00278275 /* SplashView.swift */,
+				5243085A289C245100278275 /* SplashViewModel.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		526C7B03289A8E8A00DAB86D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				526C7B04289A9B5A00DAB86D /* Navigation.swift */,
+				5237848E2888113B00CD5926 /* Assets.xcassets */,
+				5269FD3E28A2EA8D00953BEA /* SquareIconsViewModifier.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,12 +273,19 @@
 				520E2EE3288FB481008F9BA1 /* DiscoverModel.swift in Sources */,
 				520E2ED9288FB272008F9BA1 /* ProfileView.swift in Sources */,
 				520E2EE8288FDE2A008F9BA1 /* ProfileViewModel.swift in Sources */,
-				5237848D2888113100CD5926 /* ContentView.swift in Sources */,
+				5243085B289C245100278275 /* SplashViewModel.swift in Sources */,
+				5237848D2888113100CD5926 /* InboxView.swift in Sources */,
+				5269FD3F28A2EA8D00953BEA /* SquareIconsViewModifier.swift in Sources */,
 				5237848B2888113100CD5926 /* NewstonApp.swift in Sources */,
 				520E2EE5288FB491008F9BA1 /* ProfileModel.swift in Sources */,
 				520E2EEA288FDE5B008F9BA1 /* DiscoverViewModel.swift in Sources */,
+				5243087728A0313C00278275 /* DiscoverPopularCard.swift in Sources */,
+				526C7B05289A9B5A00DAB86D /* Navigation.swift in Sources */,
+				52430859289C243B00278275 /* SplashView.swift in Sources */,
 				526BE009289060B400EDD2CE /* InboxViewModel.swift in Sources */,
+				5243087928A047D600278275 /* DiscoverCategoryCard.swift in Sources */,
 				520E2EE1288FB3D5008F9BA1 /* InboxModel.swift in Sources */,
+				52430855289BCF9400278275 /* NewsletterIssue.swift in Sources */,
 				520E2ED7288FB263008F9BA1 /* DiscoverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,9 +423,10 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Newston;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = Splash;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -413,9 +458,10 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Newston;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = Splash;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,2 +1,5 @@
 import Foundation
-// todo
+
+class ProfileViewModel: ObservableObject {
+    // todo
+}

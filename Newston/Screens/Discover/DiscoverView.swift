@@ -1,13 +1,15 @@
 import SwiftUI
 
 struct DiscoverView: View {
+    @ObservedObject var discoverViewModel: DiscoverViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)// todo
+        Text("Discover")// todo
     }
 }
 
 struct DiscoverView_Previews: PreviewProvider {
     static var previews: some View {
-        DiscoverView()
+        let discoverViewModel = DiscoverViewModel()
+        DiscoverView(discoverViewModel: discoverViewModel)
     }
 }
