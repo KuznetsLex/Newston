@@ -26,24 +26,23 @@ struct NewsletterCardView: View {
                 .padding(.leading, 16)
                 .padding(.trailing, 8)
             HStack(alignment: .top) {
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 4) {
                     Text(item.authorNameDisplayable)
-                        .font(.footnote)
                         .foregroundColor(/*@START_MENU_TOKEN@*/Color("Gray")/*@END_MENU_TOKEN@*/)
+                        .font(.custom("Helvetica Neue", size: 15, relativeTo: .subheadline))
                         .lineLimit(1)
                     Text(item.titleDisplayable)
-                        .font(.headline)
-                        .fontWeight(.medium)
-                        .foregroundColor(.black)
+                        .fontWeight(.semibold)
+                        .font(.custom("Helvetica Neue", size: 17, relativeTo: .headline))
                         .lineLimit(2)
-                    Spacer()
                 }
                 Spacer()
                 VStack {
                     Text(item.timeOfPublicationDisplayable)
-                        .font(.footnote)
                         .padding(.bottom, 62)
                         .foregroundColor(Color("Gray"))
+                        .font(.custom("Helvetica Neue", size: 15, relativeTo: .subheadline))
+
                     Spacer()
                 }
             }
@@ -53,6 +52,6 @@ struct NewsletterCardView: View {
         .aspectRatio(390/96, contentMode: .fit)
         .background(.white)
         .cornerRadius(15)
-        .padding(.vertical, 4)
+        .padding(.horizontal, 12)
     }
 }
