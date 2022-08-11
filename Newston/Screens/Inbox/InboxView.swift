@@ -2,10 +2,6 @@ import SwiftUI
 
 struct InboxView: View {
     @ObservedObject var inboxViewModel: InboxViewModel
-    init (inboxViewModel: InboxViewModel) {
-        self.inboxViewModel = inboxViewModel
-    }
-
     var body: some View {
         NavigationView {
             VStack {
