@@ -17,19 +17,18 @@ struct InboxView: View {
             ZStack {
                 VStack(spacing: 0.0) {
                     Text(inboxViewModel.title)
-                        .font(.headline)
                         .fontWeight(.semibold)
+                        .font(.custom("Helvetica Neue", size: 17, relativeTo: .headline))
                     Text(inboxViewModel.unreadInfo)
-                        .font(.footnote)
-                        .fontWeight(.regular)
                         .foregroundColor(Color("Gray"))
+                        .font(.custom("Helvetica Neue", size: 14, relativeTo: .subheadline))
                 }
                 HStack(spacing: 0) {
                     Button {
                         // MARK: todo
                     } label: {
                         Text("Edit")
-                            .font(.body)
+                            .font(.custom("Helvetica Neue", size: 17, relativeTo: .headline))
                             .padding(.horizontal, 12)
 
                     }
@@ -40,8 +39,8 @@ struct InboxView: View {
                     Button {} label: {
                         inboxViewModel.toProfileActionLink
                     }
-                    .padding(.leading, 11)
-                    .padding(.trailing, 9)
+                    .padding(.leading, 8)
+                    .padding(.trailing, 12)
                 }
             }
             .font(.title2)
@@ -56,7 +55,7 @@ struct InboxView: View {
                 NewsletterCardView(item: item)
                     .listRowBackground(Color("Gray_background"))
                     .listRowSeparator(.hidden)
-                    .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    .listRowInsets(.init(top: 4, leading: 0, bottom: 4, trailing: 0))
                     .swipeActions(edge: .leading) {
                         Button {
                             inboxViewModel.toggleIssueRead()
@@ -64,7 +63,7 @@ struct InboxView: View {
                     label: {
                         Label("Read", systemImage: "envelope.open")
                     }
-                    .background(RoundedRectangle(cornerRadius: 15).fill(.orange))
+                    .tint(Color("Gray_swipes"))
                     }
                     .swipeActions(edge: .trailing) {
                         Button {
@@ -72,8 +71,10 @@ struct InboxView: View {
                         } label: {
                             Label("Archive", systemImage: "archivebox")
                         }
+                        .tint(Color("Black_swipes"))
                     }
             }
+            .listStyle(.plain)
 
     }
 }
