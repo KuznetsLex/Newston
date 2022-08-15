@@ -1,90 +1,67 @@
 import SwiftUI
+import Alamofire
+import SwiftyJSON
 
 class InboxViewModel: ObservableObject {
-    var numberOfUnread: Int
-    @Published var unreadInfo: String
+    @Published var numberOfUnread: Int = 0
+    let api: Api
 
-    init() {
-        numberOfUnread = 15
-        unreadInfo = "\(numberOfUnread) unread"
+    init(api: Api) {
+        self.api = api
+        api.fetchNewsletterIssues(inboxViewModel: self)
+        self.numberOfUnread = numberOfUnread
     }
 
+    @Published var newsCardsContent = [NewsletterIssue]()
+
+    var unreadInfo: String {
+        return "\(numberOfUnread) unread"
+    }
     let title = "Inbox"
 
-    func toggleIssueRead() {
-        // MARK: todo
-    }
-    func archiveIssue() {
-        // MARK: todo
+    @Published var isEditing = false
+    @Published var selectedItems: Set<Int> = []
+    var selectedInfo: String {
+        if selectedItems.count == 0 {
+            return "Inbox"
+        } else {
+            return "\(selectedItems.count) selected"
+        }
     }
 
     var toDiscoverActionLink: some View {
-        Navigator.navigate(to: .discover) {
+//        Navigator.navigate(to: .discover) { 
             Image("discoverIcon")
-        }
+//        }
     }
-
     var toProfileActionLink: some View {
-        Navigator.navigate(to: .profile) {
+//        Navigator.navigate(to: .profile) {
             Image("profileIcon")
+//        }
+    }
+
+    func toggleIssueRead(for item: NewsletterIssue) {
+        objectWillChange.send()
+        if let chosenIndex = newsCardsContent.firstIndex(where: { $0.id == item.id }) {
+            newsCardsContent[chosenIndex].isRead.toggle()
         }
     }
 
-    var newsCardsContent = [
-        NewsletterIssue(title: "Apple just challenged Figma. Michal Malewicz",
-                        authorName: "Medium Daily Digest",
-                        authorLogoName: "Medium Daily Digest",
-                        timeOfPublication: "19:20",
-                        isRead: false),
-        NewsletterIssue(title: "The Big Lie Is Just The Pretext",
-                        authorName: "Charlie Sykes - The Bulwark",
-                        authorLogoName: "The Bulwark",
-                        timeOfPublication: "16:30",
-                        isRead: false),
-        NewsletterIssue(title: "Android Weekly #525",
-                        authorName: "Android Weekly",
-                        authorLogoName: "Android Weekly",
-                        timeOfPublication: "15:00",
-                        isRead: false),
-        NewsletterIssue(title: "The Good Thing About Hard Things",
-                        authorName: "not boring",
-                        authorLogoName: "not boring",
-                        timeOfPublication: "14:00",
-                        isRead: false),
-        NewsletterIssue(title: "Working for the Weekend #7: Amash/Kmele 2022!",
-                        authorName: "Bankless",
-                        authorLogoName: "The Fifth Column",
-                        timeOfPublication: "11:30",
-                        isRead: false),
-        NewsletterIssue(title: "hackernewsletter #604",
-                        authorName: "Hacker News",
-                        authorLogoName: "test",
-                        timeOfPublication: "10:20",
-                        isRead: false),
-        NewsletterIssue(title: "The Morning. NY Daily July 19, 2022",
-                        authorName: "New York Time",
-                        authorLogoName: "New York Time",
-                        timeOfPublication: "9:00",
-                        isRead: false),
-        NewsletterIssue(title: "Apple just challenged Figma. Michal Malewicz",
-                        authorName: "Medium Daily Digest",
-                        authorLogoName: "Medium Daily Digest",
-                        timeOfPublication: "19:20",
-                        isRead: false),
-        NewsletterIssue(title: "The Big Lie Is Just The Pretext",
-                        authorName: "Charlie Sykes - The Bulwark",
-                        authorLogoName: "The Bulwark",
-                        timeOfPublication: "16:30",
-                        isRead: false),
-        NewsletterIssue(title: "Android Weekly #525",
-                        authorName: "Android Weekly",
-                        authorLogoName: "Android Weekly",
-                        timeOfPublication: "15:00",
-                        isRead: false),
-        NewsletterIssue(title: "The Good Thing About Hard Things",
-                        authorName: "not boring",
-                        authorLogoName: "not boring",
-                        timeOfPublication: "14:00",
-                        isRead: false)
-    ]
+    func archiveIssue(_ item: NewsletterIssue) {
+        objectWillChange.send()
+        if let chosenIndex = newsCardsContent.firstIndex(where: { $0.id == item.id }) {
+            newsCardsContent.remove(at: chosenIndex)
+        }
+    }
+
+    func archiveSelectedIssues() {
+        objectWillChange.send()
+        for item in newsCardsContent {
+            if selectedItems.contains(item.id) {
+                newsCardsContent = newsCardsContent.filter { $0 != item }
+            }
+        }
+        selectedItems = []
+    }
+
 }

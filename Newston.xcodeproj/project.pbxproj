@@ -23,9 +23,11 @@
 		5243085B289C245100278275 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243085A289C245100278275 /* SplashViewModel.swift */; };
 		5243087728A0313C00278275 /* DiscoverPopularCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243087628A0313C00278275 /* DiscoverPopularCard.swift */; };
 		5243087928A047D600278275 /* DiscoverCategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243087828A047D600278275 /* DiscoverCategoryCard.swift */; };
-		5269FD3F28A2EA8D00953BEA /* SquareIconsViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5269FD3E28A2EA8D00953BEA /* SquareIconsViewModifier.swift */; };
 		526BE009289060B400EDD2CE /* InboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BE008289060B400EDD2CE /* InboxViewModel.swift */; };
 		526C7B05289A9B5A00DAB86D /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C7B04289A9B5A00DAB86D /* Navigation.swift */; };
+		52EB0E0E28A8E298006D0F13 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52EB0E0D28A8E298006D0F13 /* Alamofire */; };
+		52EB0E1028A8FD25006D0F13 /*  NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB0E0F28A8FD25006D0F13 /*  NetworkClient.swift */; };
+		52EB0E1328A921BF006D0F13 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 52EB0E1228A921BF006D0F13 /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,9 +49,9 @@
 		5243085A289C245100278275 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		5243087628A0313C00278275 /* DiscoverPopularCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPopularCard.swift; sourceTree = "<group>"; };
 		5243087828A047D600278275 /* DiscoverCategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCategoryCard.swift; sourceTree = "<group>"; };
-		5269FD3E28A2EA8D00953BEA /* SquareIconsViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareIconsViewModifier.swift; sourceTree = "<group>"; };
 		526BE008289060B400EDD2CE /* InboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewModel.swift; sourceTree = "<group>"; };
 		526C7B04289A9B5A00DAB86D /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		52EB0E0F28A8FD25006D0F13 /*  NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NetworkClient.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EB0E1328A921BF006D0F13 /* SwiftyJSON in Frameworks */,
+				52EB0E0E28A8E298006D0F13 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +99,7 @@
 		520E2ED4288FB10F008F9BA1 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				52EB0E0F28A8FD25006D0F13 /*  NetworkClient.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -173,7 +178,6 @@
 			children = (
 				526C7B04289A9B5A00DAB86D /* Navigation.swift */,
 				5237848E2888113B00CD5926 /* Assets.xcassets */,
-				5269FD3E28A2EA8D00953BEA /* SquareIconsViewModifier.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -195,6 +199,10 @@
 			dependencies = (
 			);
 			name = Newston;
+			packageProductDependencies = (
+				52EB0E0D28A8E298006D0F13 /* Alamofire */,
+				52EB0E1228A921BF006D0F13 /* SwiftyJSON */,
+			);
 			productName = "Newton-IOS";
 			productReference = 523784872888113100CD5926 /* Newston.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +231,10 @@
 				Base,
 			);
 			mainGroup = 5237847E2888113100CD5926;
+			packageReferences = (
+				52EB0E0C28A8E298006D0F13 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				52EB0E1128A921BF006D0F13 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 523784882888113100CD5926 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -273,16 +285,16 @@
 				520E2EE3288FB481008F9BA1 /* DiscoverModel.swift in Sources */,
 				520E2ED9288FB272008F9BA1 /* ProfileView.swift in Sources */,
 				520E2EE8288FDE2A008F9BA1 /* ProfileViewModel.swift in Sources */,
+				526BE009289060B400EDD2CE /* InboxViewModel.swift in Sources */,
 				5243085B289C245100278275 /* SplashViewModel.swift in Sources */,
+				52EB0E1028A8FD25006D0F13 /*  NetworkClient.swift in Sources */,
 				5237848D2888113100CD5926 /* InboxView.swift in Sources */,
-				5269FD3F28A2EA8D00953BEA /* SquareIconsViewModifier.swift in Sources */,
 				5237848B2888113100CD5926 /* NewstonApp.swift in Sources */,
 				520E2EE5288FB491008F9BA1 /* ProfileModel.swift in Sources */,
 				520E2EEA288FDE5B008F9BA1 /* DiscoverViewModel.swift in Sources */,
 				5243087728A0313C00278275 /* DiscoverPopularCard.swift in Sources */,
 				526C7B05289A9B5A00DAB86D /* Navigation.swift in Sources */,
 				52430859289C243B00278275 /* SplashView.swift in Sources */,
-				526BE009289060B400EDD2CE /* InboxViewModel.swift in Sources */,
 				5243087928A047D600278275 /* DiscoverCategoryCard.swift in Sources */,
 				520E2EE1288FB3D5008F9BA1 /* InboxModel.swift in Sources */,
 				52430855289BCF9400278275 /* NewsletterIssue.swift in Sources */,
@@ -499,6 +511,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52EB0E0C28A8E298006D0F13 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
+		52EB0E1128A921BF006D0F13 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52EB0E0D28A8E298006D0F13 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52EB0E0C28A8E298006D0F13 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		52EB0E1228A921BF006D0F13 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52EB0E1128A921BF006D0F13 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5237847F2888113100CD5926 /* Project object */;
 }

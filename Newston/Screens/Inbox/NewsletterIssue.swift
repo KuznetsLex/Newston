@@ -19,8 +19,7 @@ struct NewsletterCardView: View {
     var body: some View {
 
         HStack {
-            Image(item.authorLogoNameDisplayable)
-                .fitToSquare()
+            AsyncImage(url: URL(string: item.authorLogoNameDisplayable))
                 .frame(width: 48, height: 48)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.leading, 16)
@@ -42,7 +41,6 @@ struct NewsletterCardView: View {
                         .padding(.bottom, 62)
                         .foregroundColor(Color("Gray"))
                         .font(.custom("Helvetica Neue", size: 15, relativeTo: .subheadline))
-
                     Spacer()
                 }
             }
