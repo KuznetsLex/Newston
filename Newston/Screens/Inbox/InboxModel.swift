@@ -1,11 +1,33 @@
 import Foundation
 
-struct NewsletterIssue: Identifiable, Equatable, Hashable {
-    let id: Int
+struct NewsletterIssue: Identifiable, Equatable {
+    let id: String
     let title: String
     let authorName: String
-    let authorLogoName: String
+    let iconURL: String
     let timeOfPublication: String
     var isRead: Bool
-    var archived: Bool
+    var isArchived: Bool
+}
+
+struct InboxPayload: Decodable {
+    let unreadCount: Int?
+    let issues: [IssuePayload]?
+
+}
+
+struct NewsletterPayload: Decodable {
+    let id: String?
+    let title: String?
+    let iconUrl: String?
+}
+
+struct IssuePayload: Decodable {
+    let id: String?
+    let newsletter: NewsletterPayload?
+    let title: String?
+    let issuedAt: String?
+    let addedToFavoritesAt: String?
+    var read: Bool?
+    var archived: Bool?
 }

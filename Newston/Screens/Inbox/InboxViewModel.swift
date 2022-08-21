@@ -1,31 +1,30 @@
 import SwiftUI
 import Alamofire
-import SwiftyJSON
 
 class InboxViewModel: ObservableObject {
-    @Published var numberOfUnread: Int = 0
+    @Published var numberOfUnread: Int? = 0
+    @Published var newsCardsContent: [NewsletterIssue] = []
     let api: Api
 
     init(api: Api) {
         self.api = api
-        api.fetchNewsletterIssues(inboxViewModel: self)
-        self.numberOfUnread = numberOfUnread
+        api.fetchInboxData { data in
+            if let unreadCount = data.unreadCount {
+                self.numberOfUnread = unreadCount
+            }
+            if let issues = data.issues {
+                self.newsCardsContent = issues.map(NewsletterIssue.init)
+            }
+        }
     }
 
-    @Published var newsCardsContent = [NewsletterIssue]()
-
-    var unreadInfo: String {
-        return "\(numberOfUnread) unread"
-    }
     let title = "Inbox"
 
-    @Published var isEditing = false
-    @Published var selectedItems: Set<Int> = []
-    var selectedInfo: String {
-        if selectedItems.count == 0 {
-            return "Inbox"
+    var unreadInfo: String {
+        if numberOfUnread == nil {
+            return "waiting fir service response..."
         } else {
-            return "\(selectedItems.count) selected"
+            return "\(String(describing: numberOfUnread!)) unread"
         }
     }
 
@@ -38,6 +37,16 @@ class InboxViewModel: ObservableObject {
 //        Navigator.navigate(to: .profile) {
             Image("profileIcon")
 //        }
+    }
+
+    @Published var isEditing = false
+    @Published var selectedItems: Set<String> = []
+    var selectedInfo: String {
+        if selectedItems.count == 0 {
+            return "Inbox"
+        } else {
+            return "\(selectedItems.count) selected"
+        }
     }
 
     func toggleIssueRead(for item: NewsletterIssue) {

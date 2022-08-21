@@ -1,17 +1,36 @@
 import SwiftUI
+import Kingfisher
 
 protocol NewsletterIssueDisplayable {
     var titleDisplayable: String { get }
     var authorNameDisplayable: String { get }
-    var authorLogoNameDisplayable: String { get }
+    var iconURLDisplayable: String { get }
     var timeOfPublicationDisplayable: String { get }
+    var isReadDisplayable: Bool { get }
+    var isArchived: Bool { get }
+}
+
+extension NewsletterIssue {
+    init(payload: IssuePayload) {
+        self.init(id: payload.id!,
+                  title: payload.title!,
+                  authorName: payload.newsletter!.title!,
+                  iconURL: (payload.newsletter?.iconUrl!)!,
+                  timeOfPublication: payload.issuedAt!,
+                  isRead: payload.read!,
+                  isArchived: payload.archived!)
+    }
 }
 
 extension NewsletterIssue: NewsletterIssueDisplayable {
     var titleDisplayable: String { title }
     var authorNameDisplayable: String { authorName }
-    var authorLogoNameDisplayable: String { authorLogoName }
-    var timeOfPublicationDisplayable: String { timeOfPublication }
+    var iconURLDisplayable: String { iconURL }
+    var timeOfPublicationDisplayable: String {
+        String(timeOfPublication[timeOfPublication.index(timeOfPublication.startIndex, offsetBy: 12)..<timeOfPublication.index(timeOfPublication.endIndex, offsetBy: -9)])
+    }
+    var isReadDisplayable: Bool { isRead }
+    var isArchivedDisplayable: Bool { isArchived }
 }
 
 struct NewsletterCardView: View {
@@ -19,7 +38,9 @@ struct NewsletterCardView: View {
     var body: some View {
 
         HStack {
-            AsyncImage(url: URL(string: item.authorLogoNameDisplayable))
+            KFImage(URL(string: item.iconURLDisplayable))
+                .cacheMemoryOnly()
+                .fitToSquare()
                 .frame(width: 48, height: 48)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.leading, 16)

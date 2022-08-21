@@ -23,9 +23,11 @@ struct InboxView: View {
                 Text(inboxViewModel.title)
                     .fontWeight(.semibold)
                     .font(.custom("Helvetica Neue", size: 17, relativeTo: .headline))
+                if inboxViewModel.numberOfUnread != 0 {
                 Text(inboxViewModel.unreadInfo)
                     .foregroundColor(Color("Gray"))
                     .font(.custom("Helvetica Neue", size: 14, relativeTo: .subheadline))
+                }
             }
             HStack(spacing: 0) {
                 Button {
@@ -118,7 +120,8 @@ struct InboxView: View {
                                 Spacer()
                                 Text("Archive")
                                 Spacer()
-                            }                        }
+                            }
+                        }
                         .tint(Color("Black_1"))
                     }
             }

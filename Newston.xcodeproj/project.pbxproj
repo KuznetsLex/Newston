@@ -25,9 +25,10 @@
 		5243087928A047D600278275 /* DiscoverCategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243087828A047D600278275 /* DiscoverCategoryCard.swift */; };
 		526BE009289060B400EDD2CE /* InboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BE008289060B400EDD2CE /* InboxViewModel.swift */; };
 		526C7B05289A9B5A00DAB86D /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C7B04289A9B5A00DAB86D /* Navigation.swift */; };
+		52BE06D028B2B95B00F21177 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 52BE06CF28B2B95B00F21177 /* Kingfisher */; };
+		52BE06D228B2BFB600F21177 /* SquareIconsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE06D128B2BFB600F21177 /* SquareIconsModifier.swift */; };
 		52EB0E0E28A8E298006D0F13 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52EB0E0D28A8E298006D0F13 /* Alamofire */; };
 		52EB0E1028A8FD25006D0F13 /*  NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB0E0F28A8FD25006D0F13 /*  NetworkClient.swift */; };
-		52EB0E1328A921BF006D0F13 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 52EB0E1228A921BF006D0F13 /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		5243087828A047D600278275 /* DiscoverCategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCategoryCard.swift; sourceTree = "<group>"; };
 		526BE008289060B400EDD2CE /* InboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewModel.swift; sourceTree = "<group>"; };
 		526C7B04289A9B5A00DAB86D /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		52BE06D128B2BFB600F21177 /* SquareIconsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareIconsModifier.swift; sourceTree = "<group>"; };
 		52EB0E0F28A8FD25006D0F13 /*  NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NetworkClient.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52EB0E1328A921BF006D0F13 /* SwiftyJSON in Frameworks */,
+				52BE06D028B2B95B00F21177 /* Kingfisher in Frameworks */,
 				52EB0E0E28A8E298006D0F13 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +180,7 @@
 			children = (
 				526C7B04289A9B5A00DAB86D /* Navigation.swift */,
 				5237848E2888113B00CD5926 /* Assets.xcassets */,
+				52BE06D128B2BFB600F21177 /* SquareIconsModifier.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -201,7 +204,7 @@
 			name = Newston;
 			packageProductDependencies = (
 				52EB0E0D28A8E298006D0F13 /* Alamofire */,
-				52EB0E1228A921BF006D0F13 /* SwiftyJSON */,
+				52BE06CF28B2B95B00F21177 /* Kingfisher */,
 			);
 			productName = "Newton-IOS";
 			productReference = 523784872888113100CD5926 /* Newston.app */;
@@ -233,7 +236,7 @@
 			mainGroup = 5237847E2888113100CD5926;
 			packageReferences = (
 				52EB0E0C28A8E298006D0F13 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				52EB0E1128A921BF006D0F13 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				52BE06CE28B2B95B00F21177 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 523784882888113100CD5926 /* Products */;
 			projectDirPath = "";
@@ -282,12 +285,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EB0E1028A8FD25006D0F13 /*  NetworkClient.swift in Sources */,
 				520E2EE3288FB481008F9BA1 /* DiscoverModel.swift in Sources */,
+				52BE06D228B2BFB600F21177 /* SquareIconsModifier.swift in Sources */,
 				520E2ED9288FB272008F9BA1 /* ProfileView.swift in Sources */,
 				520E2EE8288FDE2A008F9BA1 /* ProfileViewModel.swift in Sources */,
 				526BE009289060B400EDD2CE /* InboxViewModel.swift in Sources */,
 				5243085B289C245100278275 /* SplashViewModel.swift in Sources */,
-				52EB0E1028A8FD25006D0F13 /*  NetworkClient.swift in Sources */,
 				5237848D2888113100CD5926 /* InboxView.swift in Sources */,
 				5237848B2888113100CD5926 /* NewstonApp.swift in Sources */,
 				520E2EE5288FB491008F9BA1 /* ProfileModel.swift in Sources */,
@@ -513,6 +517,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		52BE06CE28B2B95B00F21177 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		52EB0E0C28A8E298006D0F13 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -521,26 +533,18 @@
 				minimumVersion = 5.6.1;
 			};
 		};
-		52EB0E1128A921BF006D0F13 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		52BE06CF28B2B95B00F21177 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52BE06CE28B2B95B00F21177 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		52EB0E0D28A8E298006D0F13 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 52EB0E0C28A8E298006D0F13 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		52EB0E1228A921BF006D0F13 /* SwiftyJSON */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 52EB0E1128A921BF006D0F13 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
