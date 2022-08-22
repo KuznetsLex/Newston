@@ -1,6 +1,25 @@
 import SwiftUI
 import Kingfisher
 
+extension NewsletterIssue {
+    init(payload: IssuePayload) {
+        self.init(id: payload.id ?? "id",
+                  title: payload.title ?? "Something interesting...",
+                  authorName: payload.newsletter!.title ?? "unknown",
+                  iconURL: (payload.newsletter?.iconUrl!) ?? "http://51.250.88.170:4567/icons/3.png",
+                  // в будущем поменять на progressIcon
+                  timeOfPublication: Self.convertDate(dateString: payload.issuedAt),
+                  isRead: payload.read ?? false,
+                  isArchived: payload.archived ?? false)
+    }
+    private static func convertDate(dateString: String?) -> Date {
+        guard let dateString = dateString else { return .init() }
+            let timeFormatter = ISO8601DateFormatter()
+        timeFormatter.formatOptions = [.withInternetDateTime]
+        guard let date = timeFormatter.date(from: dateString) else { return .init() }
+        return date
+    }
+}
 protocol NewsletterIssueDisplayable {
     var titleDisplayable: String { get }
     var authorNameDisplayable: String { get }
@@ -10,25 +29,17 @@ protocol NewsletterIssueDisplayable {
     var isArchived: Bool { get }
 }
 
-extension NewsletterIssue {
-    init(payload: IssuePayload) {
-        self.init(id: payload.id!,
-                  title: payload.title!,
-                  authorName: payload.newsletter!.title!,
-                  iconURL: (payload.newsletter?.iconUrl!)!,
-                  timeOfPublication: payload.issuedAt!,
-                  isRead: payload.read!,
-                  isArchived: payload.archived!)
-    }
-}
-
 extension NewsletterIssue: NewsletterIssueDisplayable {
     var titleDisplayable: String { title }
     var authorNameDisplayable: String { authorName }
     var iconURLDisplayable: String { iconURL }
     var timeOfPublicationDisplayable: String {
-        String(timeOfPublication[timeOfPublication.index(timeOfPublication.startIndex, offsetBy: 12)..<timeOfPublication.index(timeOfPublication.endIndex, offsetBy: -9)])
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "HH:mm"
+        let issuedAtString = timeFormatter.string(from: timeOfPublication)
+        return issuedAtString
     }
+
     var isReadDisplayable: Bool { isRead }
     var isArchivedDisplayable: Bool { isArchived }
 }

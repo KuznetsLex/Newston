@@ -4,10 +4,13 @@ import Alamofire
 class InboxViewModel: ObservableObject {
     @Published var numberOfUnread: Int? = 0
     @Published var newsCardsContent: [NewsletterIssue] = []
-    let api: Api
-
+    private let api: Api
     init(api: Api) {
         self.api = api
+        fetchNewsletterIssues()
+    }
+
+    func fetchNewsletterIssues() {
         api.fetchInboxData { data in
             if let unreadCount = data.unreadCount {
                 self.numberOfUnread = unreadCount

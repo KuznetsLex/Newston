@@ -5,7 +5,7 @@ struct NewsletterIssue: Identifiable, Equatable {
     let title: String
     let authorName: String
     let iconURL: String
-    let timeOfPublication: String
+    let timeOfPublication: Date
     var isRead: Bool
     var isArchived: Bool
 }
