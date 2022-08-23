@@ -6,8 +6,9 @@ extension NewsletterIssue {
         self.init(id: payload.id ?? "id",
                   title: payload.title ?? "Something interesting...",
                   authorName: payload.newsletter!.title ?? "unknown",
-                  iconURL: (payload.newsletter?.iconUrl!) ?? "http://51.250.88.170:4567/icons/3.png",
+                  iconUrl: (payload.newsletter?.iconUrl) ?? "http://51.250.88.170:4567/icons/3.png",
                   // в будущем поменять на progressIcon
+                  issueUrl: payload.issueUrl ?? "http://51.250.88.170:4567/icons/3.png",
                   timeOfPublication: Self.convertDate(dateString: payload.issuedAt),
                   isRead: payload.read ?? false,
                   isArchived: payload.archived ?? false)
@@ -23,7 +24,8 @@ extension NewsletterIssue {
 protocol NewsletterIssueDisplayable {
     var titleDisplayable: String { get }
     var authorNameDisplayable: String { get }
-    var iconURLDisplayable: String { get }
+    var iconUrlDisplayable: String { get }
+    var issueUrlDisplayable: String { get }
     var timeOfPublicationDisplayable: String { get }
     var isReadDisplayable: Bool { get }
     var isArchived: Bool { get }
@@ -32,7 +34,8 @@ protocol NewsletterIssueDisplayable {
 extension NewsletterIssue: NewsletterIssueDisplayable {
     var titleDisplayable: String { title }
     var authorNameDisplayable: String { authorName }
-    var iconURLDisplayable: String { iconURL }
+    var iconUrlDisplayable: String { iconUrl }
+    var issueUrlDisplayable: String { issueUrl }
     var timeOfPublicationDisplayable: String {
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "HH:mm"
@@ -46,10 +49,14 @@ extension NewsletterIssue: NewsletterIssueDisplayable {
 
 struct NewsletterCardView: View {
     var item: NewsletterIssueDisplayable
+
+//    var toNewsletterIssueActionLink: some View {
+//    }
     var body: some View {
+        Navigator.navigate(to: .issue, url: item.issueUrlDisplayable) {
 
         HStack {
-            KFImage(URL(string: item.iconURLDisplayable))
+            KFImage(URL(string: item.iconUrlDisplayable))
                 .cacheMemoryOnly()
                 .fitToSquare()
                 .frame(width: 48, height: 48)
@@ -82,6 +89,8 @@ struct NewsletterCardView: View {
         .aspectRatio(390/96, contentMode: .fit)
         .background(.white)
         .cornerRadius(15)
+
         .padding(.horizontal, 12)
     }
+}
 }

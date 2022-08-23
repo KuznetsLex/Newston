@@ -8,7 +8,7 @@ class SplashViewModel: ObservableObject {
     }
 
     var toInbox: some View {
-        Navigator.navigate(to: .startInbox, content: { AnyView(_fromValue: (Any).self) })
+        Navigator.navigate(to: .startInbox, url: nil, content: { AnyView(_fromValue: (Any).self) })
     }
 
     let splashImage = Image("splashImage")
