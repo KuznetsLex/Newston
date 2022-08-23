@@ -1,4 +1,5 @@
 import SwiftUI
+import Kingfisher
 struct FitToAspectSquare: ViewModifier {
 
     public func body(content: Content) -> some View {
@@ -15,7 +16,7 @@ struct FitToAspectSquare: ViewModifier {
     }
 }
 
-public extension Image {
+public extension KFImage {
     func fitToSquare() -> some View {
         self.resizable().modifier(FitToAspectSquare())
     }

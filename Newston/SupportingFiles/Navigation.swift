@@ -11,10 +11,11 @@ struct Navigator {
     static func navigate<T: View>(to route: Route, content: () -> T) -> some View {
         switch route {
         case .splash:
-            let splashViewModel = SplashViewModel()
+            let inboxViewModel = InboxViewModel(api: Api())
+            let splashViewModel = SplashViewModel(inboxViewModel: inboxViewModel)
             return AnyView(SplashView(splashViewModel: splashViewModel))
         case .startInbox:
-            let inboxViewModel = InboxViewModel()
+            let inboxViewModel = InboxViewModel(api: Api())
             return AnyView(InboxView(inboxViewModel: inboxViewModel))
         case .discover:
             let discoverViewModel = DiscoverViewModel()
