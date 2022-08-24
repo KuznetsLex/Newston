@@ -4,7 +4,8 @@ struct NewsletterIssue: Identifiable, Equatable {
     let id: String
     let title: String
     let authorName: String
-    let iconURL: String
+    let iconUrl: String
+    let issueUrl: String
     let timeOfPublication: Date
     var isRead: Bool
     var isArchived: Bool
@@ -26,6 +27,7 @@ struct IssuePayload: Decodable {
     let id: String?
     let newsletter: NewsletterPayload?
     let title: String?
+    let issueUrl: String?
     let issuedAt: String?
     let addedToFavoritesAt: String?
     var read: Bool?

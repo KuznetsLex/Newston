@@ -127,6 +127,7 @@ struct InboxView: View {
             }
             .listStyle(.plain)
             .refreshable {
+                inboxViewModel.fetchNewsletterIssues()
             }
             .environment(\.editMode, .constant(inboxViewModel.isEditing ? EditMode.active : EditMode.inactive))
             .animation(Animation.spring(), value: inboxViewModel.isEditing)
