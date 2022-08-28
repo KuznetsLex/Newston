@@ -9,6 +9,7 @@ Newston — это приложение для email-newsletters, то есть 
 
 
 ## Demo
+(Дайте ему минутку на загрузиться...)
 ![](https://github.com/Student-Labs-2022/Newston-iOS/blob/readme/demo_gif/Newston_demo.gif)
 
 
