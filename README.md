@@ -10,6 +10,7 @@ Newston — это приложение для email-newsletters, то есть 
 
 ## Demo
 (Дайте ему минутку на загрузиться...)
+
 ![](https://github.com/Student-Labs-2022/Newston-iOS/blob/readme/demo_gif/Newston_demo.gif)
 
 
@@ -25,3 +26,5 @@ Newston — это приложение для email-newsletters, то есть 
 
 ## Architecture and Code Quality
 Проект придерживается архитектуры MVVM, для реализации которой используется фреймворк Combine. Проект разделен на несколько уровней: ядро, экраны, API и опорные файлы. Папка “Screens” содержит основные сущности приложения - Inbox, Discover, Profile, а также web-экран для чтения газет. Discover организован в несколько папок, т.к. эта сущность подразумевает наличие трех последовательных экранов.
+
+Для автоматической проверки кода используется утилита [SwiftLint](https://github.com/Student-Labs-2022/Newston-iOS/tree/develop).
