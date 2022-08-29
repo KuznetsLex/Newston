@@ -32,9 +32,9 @@ class InboxViewModel: ObservableObject {
     }
 
     var toDiscoverActionLink: some View {
-//        Navigator.navigate(to: .discover) { 
+        Navigator.navigate(to: .discover, url: nil) {
             Image("discoverIcon")
-//        }
+        }
     }
     var toProfileActionLink: some View {
 //        Navigator.navigate(to: .profile) {

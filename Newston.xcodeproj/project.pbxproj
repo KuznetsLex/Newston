@@ -21,12 +21,17 @@
 		52430855289BCF9400278275 /* NewsletterIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52430854289BCF9400278275 /* NewsletterIssue.swift */; };
 		52430859289C243B00278275 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52430858289C243B00278275 /* SplashView.swift */; };
 		5243085B289C245100278275 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243085A289C245100278275 /* SplashViewModel.swift */; };
-		5243087728A0313C00278275 /* DiscoverPopularCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243087628A0313C00278275 /* DiscoverPopularCard.swift */; };
 		5243087928A047D600278275 /* DiscoverCategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5243087828A047D600278275 /* DiscoverCategoryCard.swift */; };
 		526BE009289060B400EDD2CE /* InboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BE008289060B400EDD2CE /* InboxViewModel.swift */; };
 		526C7B05289A9B5A00DAB86D /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C7B04289A9B5A00DAB86D /* Navigation.swift */; };
 		52B0393428B3E7C00084A0D9 /* IssueWebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0393328B3E7BF0084A0D9 /* IssueWebViewModel.swift */; };
 		52B0393628B3E7E50084A0D9 /* IssueWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0393528B3E7E50084A0D9 /* IssueWebView.swift */; };
+		52B0393B28B58F820084A0D9 /* TechnologyCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0393A28B58F820084A0D9 /* TechnologyCategoryViewModel.swift */; };
+		52B0393D28B58FA90084A0D9 /* TechnologyCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0393C28B58FA90084A0D9 /* TechnologyCategoryView.swift */; };
+		52B0393F28B58FC50084A0D9 /* NewsletterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0393E28B58FC50084A0D9 /* NewsletterView.swift */; };
+		52B0394228B5AF4D0084A0D9 /* NewsletterDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0394128B5AF4D0084A0D9 /* NewsletterDescriptionViewModel.swift */; };
+		52B0394428B5AF7C0084A0D9 /* NewsletterDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0394328B5AF7C0084A0D9 /* NewsletterDescriptionView.swift */; };
+		52B0394628B5AFF10084A0D9 /* IssueInDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0394528B5AFF10084A0D9 /* IssueInDescription.swift */; };
 		52BE06D028B2B95B00F21177 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 52BE06CF28B2B95B00F21177 /* Kingfisher */; };
 		52BE06D228B2BFB600F21177 /* SquareIconsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BE06D128B2BFB600F21177 /* SquareIconsModifier.swift */; };
 		52EB0E0E28A8E298006D0F13 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52EB0E0D28A8E298006D0F13 /* Alamofire */; };
@@ -50,12 +55,17 @@
 		52430854289BCF9400278275 /* NewsletterIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsletterIssue.swift; sourceTree = "<group>"; };
 		52430858289C243B00278275 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		5243085A289C245100278275 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
-		5243087628A0313C00278275 /* DiscoverPopularCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverPopularCard.swift; sourceTree = "<group>"; };
 		5243087828A047D600278275 /* DiscoverCategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCategoryCard.swift; sourceTree = "<group>"; };
 		526BE008289060B400EDD2CE /* InboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewModel.swift; sourceTree = "<group>"; };
 		526C7B04289A9B5A00DAB86D /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		52B0393328B3E7BF0084A0D9 /* IssueWebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueWebViewModel.swift; sourceTree = "<group>"; };
 		52B0393528B3E7E50084A0D9 /* IssueWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueWebView.swift; sourceTree = "<group>"; };
+		52B0393A28B58F820084A0D9 /* TechnologyCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyCategoryViewModel.swift; sourceTree = "<group>"; };
+		52B0393C28B58FA90084A0D9 /* TechnologyCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyCategoryView.swift; sourceTree = "<group>"; };
+		52B0393E28B58FC50084A0D9 /* NewsletterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsletterView.swift; sourceTree = "<group>"; };
+		52B0394128B5AF4D0084A0D9 /* NewsletterDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsletterDescriptionViewModel.swift; sourceTree = "<group>"; };
+		52B0394328B5AF7C0084A0D9 /* NewsletterDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsletterDescriptionView.swift; sourceTree = "<group>"; };
+		52B0394528B5AFF10084A0D9 /* IssueInDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueInDescription.swift; sourceTree = "<group>"; };
 		52BE06D128B2BFB600F21177 /* SquareIconsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareIconsModifier.swift; sourceTree = "<group>"; };
 		52EB0E0F28A8FD25006D0F13 /*  NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NetworkClient.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,10 +124,9 @@
 			isa = PBXGroup;
 			children = (
 				520E2EE2288FB481008F9BA1 /* DiscoverModel.swift */,
-				520E2EE9288FDE5B008F9BA1 /* DiscoverViewModel.swift */,
-				520E2ED6288FB263008F9BA1 /* DiscoverView.swift */,
-				5243087628A0313C00278275 /* DiscoverPopularCard.swift */,
-				5243087828A047D600278275 /* DiscoverCategoryCard.swift */,
+				52B0393728B58ED70084A0D9 /* Main */,
+				52B0393828B58F4A0084A0D9 /* Categories */,
+				52B0394028B5AB9A0084A0D9 /* Newsletter */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -197,6 +206,44 @@
 				52B0393528B3E7E50084A0D9 /* IssueWebView.swift */,
 			);
 			path = IssueWeb;
+			sourceTree = "<group>";
+		};
+		52B0393728B58ED70084A0D9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				520E2EE9288FDE5B008F9BA1 /* DiscoverViewModel.swift */,
+				520E2ED6288FB263008F9BA1 /* DiscoverView.swift */,
+				5243087828A047D600278275 /* DiscoverCategoryCard.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		52B0393828B58F4A0084A0D9 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				52B0393928B58F520084A0D9 /* Technology */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		52B0393928B58F520084A0D9 /* Technology */ = {
+			isa = PBXGroup;
+			children = (
+				52B0393A28B58F820084A0D9 /* TechnologyCategoryViewModel.swift */,
+				52B0393C28B58FA90084A0D9 /* TechnologyCategoryView.swift */,
+				52B0393E28B58FC50084A0D9 /* NewsletterView.swift */,
+			);
+			path = Technology;
+			sourceTree = "<group>";
+		};
+		52B0394028B5AB9A0084A0D9 /* Newsletter */ = {
+			isa = PBXGroup;
+			children = (
+				52B0394128B5AF4D0084A0D9 /* NewsletterDescriptionViewModel.swift */,
+				52B0394328B5AF7C0084A0D9 /* NewsletterDescriptionView.swift */,
+				52B0394528B5AFF10084A0D9 /* IssueInDescription.swift */,
+			);
+			path = Newsletter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +348,7 @@
 			files = (
 				52EB0E1028A8FD25006D0F13 /*  NetworkClient.swift in Sources */,
 				520E2EE3288FB481008F9BA1 /* DiscoverModel.swift in Sources */,
+				52B0394228B5AF4D0084A0D9 /* NewsletterDescriptionViewModel.swift in Sources */,
 				52BE06D228B2BFB600F21177 /* SquareIconsModifier.swift in Sources */,
 				520E2ED9288FB272008F9BA1 /* ProfileView.swift in Sources */,
 				520E2EE8288FDE2A008F9BA1 /* ProfileViewModel.swift in Sources */,
@@ -309,16 +357,20 @@
 				5237848D2888113100CD5926 /* InboxView.swift in Sources */,
 				5237848B2888113100CD5926 /* NewstonApp.swift in Sources */,
 				520E2EE5288FB491008F9BA1 /* ProfileModel.swift in Sources */,
+				52B0393B28B58F820084A0D9 /* TechnologyCategoryViewModel.swift in Sources */,
 				520E2EEA288FDE5B008F9BA1 /* DiscoverViewModel.swift in Sources */,
-				5243087728A0313C00278275 /* DiscoverPopularCard.swift in Sources */,
 				526C7B05289A9B5A00DAB86D /* Navigation.swift in Sources */,
 				52430859289C243B00278275 /* SplashView.swift in Sources */,
+				52B0394628B5AFF10084A0D9 /* IssueInDescription.swift in Sources */,
 				52B0393428B3E7C00084A0D9 /* IssueWebViewModel.swift in Sources */,
 				52B0393628B3E7E50084A0D9 /* IssueWebView.swift in Sources */,
 				5243087928A047D600278275 /* DiscoverCategoryCard.swift in Sources */,
 				520E2EE1288FB3D5008F9BA1 /* InboxModel.swift in Sources */,
 				52430855289BCF9400278275 /* NewsletterIssue.swift in Sources */,
 				520E2ED7288FB263008F9BA1 /* DiscoverView.swift in Sources */,
+				52B0393D28B58FA90084A0D9 /* TechnologyCategoryView.swift in Sources */,
+				52B0394428B5AF7C0084A0D9 /* NewsletterDescriptionView.swift in Sources */,
+				52B0393F28B58FC50084A0D9 /* NewsletterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Newston/Preview Content\"";
@@ -502,7 +554,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = email.newston.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Newston App Store";
+				PROVISIONING_PROFILE_SPECIFIER = "Newston Development";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
