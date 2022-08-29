@@ -49,15 +49,11 @@ extension NewsletterIssue: NewsletterIssueDisplayable {
 
 struct NewsletterCardView: View {
     var item: NewsletterIssueDisplayable
-
-//    var toNewsletterIssueActionLink: some View {
-//    }
     var body: some View {
         Navigator.navigate(to: .issue, url: item.issueUrlDisplayable) {
 
         HStack {
             KFImage(URL(string: item.iconUrlDisplayable))
-                .cacheMemoryOnly()
                 .fitToSquare()
                 .frame(width: 48, height: 48)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -89,7 +85,6 @@ struct NewsletterCardView: View {
         .aspectRatio(390/96, contentMode: .fit)
         .background(.white)
         .cornerRadius(15)
-
         .padding(.horizontal, 12)
     }
 }

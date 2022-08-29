@@ -22,7 +22,7 @@ struct SplashView: View {
                 }
                 Spacer()
             }
-            .background(Color("Gray_background"))
+            .background(Color("Splash"))
         }
     }
 }
